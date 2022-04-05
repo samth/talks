@@ -44,13 +44,13 @@
     (if (code-pict? c)
         (let* ([p (proplist/simple props)]
                [last0 (code-pict-bottom-line-pict c)]
-               [last1 (htl-append (ghost last0) (lift p (* 3/3 (pict-height (t "X")))))]
+               [last1 (htl-append (ghost last0) (lift-above-baseline p (* 3/3 (pict-height (t "X")))))]
                [last2 (let-values ([(x y) (lt-find c last0)])
                         (inset last1 x y 0 0))])
           (pict->code-pict (lt-superimpose c last2)
                            last1))
         (let ([p (proplist/simple props)])
-          (htl-append c (lift p (* 4/3 (pict-height p)))))))
+          (htl-append c (lift-above-baseline p (* 4/3 (pict-height p)))))))
   
   (define-syntax code/prop
     (syntax-rules ()

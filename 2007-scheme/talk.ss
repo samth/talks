@@ -4,7 +4,8 @@
          (only-in slideshow/slideshow slide/title page-item page-para/c page-para page-subitem
                   slide/title/center slide/center [pin-arrow-line old-pin-arrow-line])
          scheme/match
-         (planet cce/scheme:6/slideshow)
+         ;(planet cce/scheme:6/slideshow)
+         slideshow/pict
          slideshow/code
          (only-in mzlib/etc begin-with-definitions)
          (except-in "util.ss" big small)
